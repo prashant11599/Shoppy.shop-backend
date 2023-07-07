@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start":"node server.js"
+    "start": "node -r esm server.js",
+    "dev": "nodemon -r esm server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type":"module",
   "dependencies": {
     "bcrypt": "^5.1.0",
     "cookie-parser": "^1.4.6",
@@ -30,4 +30,3 @@
     "nodemon": "^2.0.16"
   }
 }
-
