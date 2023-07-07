@@ -50,9 +50,6 @@ const userOtpSchema=new mongoose.Schema({
         min:5
     }
 })
-
-
-
 export const userotpModel=mongoose.model('student_otp',userOtpSchema);
 export const userRegisterModel=mongoose.model('student',userRegisterSchema);
 
