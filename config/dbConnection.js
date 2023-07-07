@@ -6,10 +6,10 @@ import mongoose from 'mongoose';
  export const dbConnection= async(DB_URL)=>{
      try {
          await mongoose.connect(DB_URL,()=>{
-             console.log("db connected successfully once again",DB_URL);
+            //  console.log("db connected successfully once again",DB_URL);
          })
      } catch (error) {
-           console.log(error)
-         
+        //    console.log(error)    
      }
  }
+ 

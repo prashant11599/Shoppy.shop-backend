@@ -38,7 +38,7 @@ app.get("/api/getkey", (req, res) =>
 app.use(errorHandler);
 dbConnection(DB_URL);
 app.listen(PORT,()=>{
-    console.log(`app is listening on port ${PORT}`)
+    // console.log(`app is listening on port ${PORT}`)
 });
 
 
