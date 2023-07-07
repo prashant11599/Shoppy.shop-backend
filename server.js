@@ -1,6 +1,6 @@
 import express from 'express';
-import { PORT,DB_URL,PAYMENT_API_KEY,PAYMENT_API_SECRET} from './config';
-import { dbConnection } from './config/dbConnection';
+import { PORT,DB_URL,PAYMENT_API_KEY,PAYMENT_API_SECRET} from '../config';
+import { dbConnection } from '../config/dbConnection';
 import user_router from "./routes/user_routes.js";
 import product_router from "./routes/product_routes.js";
 import payment_router from "./routes/payment_routes.js";
