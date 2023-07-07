@@ -1,6 +1,6 @@
 import { userotpModel, userRegisterModel } from '../models/userModel.js';
 import bcrypt from 'bcrypt';
-import { registerValidation, loginValidation } from './UserValidation.js';
+import { registerValidation, loginValidation } from './Uservalidation.js';
 import CustomErrorHandler from '../utils/customErrorHandler.js';
 import Jwtservice from '../utils/jwtService.js';
 import { HASH_SECRET, REFRESH_JWT_SECRET } from '../config/index.js';
