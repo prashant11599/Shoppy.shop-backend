@@ -12,7 +12,7 @@ import mongoose from 'mongoose';
 const app=express();
 
 app.use(cors({ 
-    origin:['https://shoppy-shop.onrender.com','http://localhost:3000'], 
+    origin:['https://shoppy-shop.onrender.com'], 
     methods: ['GET', 'PUT', 'POST'], 
     credentials: true, 
     maxAge: 600, 
