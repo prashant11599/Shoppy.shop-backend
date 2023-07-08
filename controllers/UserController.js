@@ -55,13 +55,13 @@ export const userRegistration = async (req, res, next) => {
         res.cookie('jwt_access', access_token, {
             httpOnly: true,
             secure:true,
-            SameSite:None,
+            SameSite:'None',
             expires: new Date(Date.now() + (1000 * 60 )),
         })
         res.cookie('jwt_refresh', refresh_token, {
             httpOnly: true,
             secure:true,
-            SameSite:None,
+            SameSite:'None',
             expires: new Date(Date.now() + (1000 * 1 * 60 * 60 * 24)),
         })
         res.status(201).send({ "id": newUser._id, "status": "success", "message": "Registration Success,please check your email", });
@@ -99,14 +99,14 @@ export const userLogin = async (req, res, next) => {
         res.cookie('jwt_access', access_token, {
             httpOnly: true,
             secure:true,
-            SameSite:None,
+            SameSite:'None',
             expires: new Date(Date.now() + (1000 * 60 )),
         })
 
         res.cookie('jwt_refresh', refresh_token, {
             httpOnly: true,
             secure:true,
-            SameSite:None,
+            SameSite:'None',
             expires: new Date(Date.now() + (1000 * 1 * 60 * 60 * 24)),
         })
         res.status(201).send({ "id": user._id, "status": "success", "message": "login Successful" });
@@ -166,13 +166,13 @@ export const VerifyPassword = async (req, res, next) => {
             res.cookie('jwt_access', access_token, {
                 httpOnly: true,
                 secure:true,
-                SameSite:None,
+                SameSite:'None',
                 expires: new Date(Date.now() + (1000 * 60 )),
             })
             res.cookie('jwt_refresh', refresh_token, {
                 httpOnly: true,
                 secure:true,
-                SameSite:None,
+                SameSite:'None',
                 expires: new Date(Date.now() + (1000 * 1* 60 * 60 * 24)),
             })
 
@@ -237,13 +237,13 @@ export const tokenRefresh = async (req, res, next) => {
         res.cookie('jwt_access', access_token, {
             httpOnly: true,
             secure:true,
-            SameSite:None,
+            SameSite:'None',
             expires: new Date(Date.now() + (1000 * 60 )),
         })
         res.cookie('jwt_refresh', refresh_token, {
             httpOnly: true,
             secure:true,
-            SameSite:None,
+            SameSite:'None',
             expires: new Date(Date.now() + (1000 * 1 * 60 * 60 * 24)),
         })
 
@@ -304,13 +304,13 @@ export const verifyOtp = async (req, res, next) => {
             res.cookie('jwt_access', access_token, {
                 httpOnly: true,
                 secure:true,
-                SameSite:None,
+                SameSite:'None',
                 expires: new Date(Date.now() + (1000 * 60 )),
             })
             res.cookie('jwt_refresh', refresh_token, {
                 httpOnly: true,
                 secure:true,
-                SameSite:None,
+                SameSite:'None',
                 expires: new Date(Date.now() + (1000 * 1 * 60 * 60 * 24)),
             })
 
