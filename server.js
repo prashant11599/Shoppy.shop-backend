@@ -10,9 +10,9 @@ import cors from 'cors';
 import Razorpay from "razorpay";
 import mongoose from 'mongoose';
 const app=express();
-dbConnection();
+
 app.use(cors({ 
-    origin:'https://shoppy-shop.onrender.com', 
+    origin:['https://shoppy-shop.onrender.com','http://localhost:3000'], 
     methods: ['GET', 'PUT', 'POST'], 
     credentials: true, 
     maxAge: 600, 
@@ -39,6 +39,7 @@ app.get("/api/getkey", (req, res) =>
   res.status(200).json({ key: PAYMENT_API_KEY })
 );
 app.use(errorHandler);
+dbConnection();
 mongoose.connection.once('open',()=>{
     console.log(`connected to db ${DB_URL}`);
     app.listen(PORT,()=>{
